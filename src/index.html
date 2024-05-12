@@ -13,20 +13,34 @@
 
 <body>
   <h1 class="text-5xl">Element API</h1>
-  <form id="login-form">
-    <input class="ring-1 ring-stone-600 rounded" placeholder="Username" id="username" type="text" />
-    <input class="ring-1 ring-stone-600 rounded" placeholder="Passwort" id="password" type="password" />
-    <button class="bg-green-500 rounded px-2 py-1" type="submit">Login</button>
+  <!-- Login Section -->
+  <form id="login-form" class="flex flex-col gap-2 w-fit mt-[25vh] p-10 bg-stone-100 rounded-lg">
+    <label for="username">Benutzernamen und Passwort eingeben:</label>
+    <input class="ring-1 ring-stone-300 p-1 rounded" placeholder="Username" id="username" type="text" />
+    <input class="ring-1 ring-stone-300 p-1 rounded" placeholder="Passwort" id="password" type="password" />
+    <button class="ring-2 ring-green-500 bg-green-100 hover:bg-green-200 rounded px-2 py-1 w-fit" type="submit">
+      Login
+    </button>
   </form>
-  <section id="element-section" class="hidden p-2">
-    <button onclick="getElements()" class="border border-stone-800 rounded px-2 py-1">Get All Elements</button>
-    <div id="element-container" class="flex flex-col gap-2"></div>
 
-    <form id="add-item-form">
-      <input class="ring-1 ring-stone-600 rounded" placeholder="Name" id="name" type="text" />
-      <input class="ring-1 ring-stone-600 rounded" placeholder="Description" id="description" type="text" />
-      <button class="bg-green-500 rounded px-2 py-1" type="submit">Add Element</button>
-    </form>
+  <!-- Element Section -->
+  <section id="element-section" class="hidden">
+    <div class="flex flex-col items-center gap-4">
+      <button onclick="getElements()" class="border border-stone-800 rounded px-2 py-1">
+        Elemente neu laden
+      </button>
+      <div id="element-container" class="flex flex-col gap-2"></div>
+
+      <!-- Add Item Form -->
+      <form id="add-item-form" class="flex flex-col gap-2 items-center p-5 px-10 w-full bg-stone-100 rounded-lg">
+        <label for="name">Neues Element hinzufügen:</label>
+        <input class="ring-1 ring-stone-600 p-1 rounded" placeholder="Name" id="name" type="text" />
+        <input class="ring-1 ring-stone-600 p-1 rounded" placeholder="Description" id="description" type="text" />
+        <button class="ring-2 ring-green-500 bg-green-100 hover:bg-green-200 rounded px-2 py-1 w-fit" type="submit">
+          Element hinzufügen
+        </button>
+      </form>
+    </div>
   </section>
 </body>
 
