@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Element API</title>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./script.js" defer></script>
+  <link href="./output.css" rel="stylesheet" />
+</head>
+
+<body>
+  <h1 class="text-5xl">Element API</h1>
+  <form id="login-form">
+    <input class="ring-1 ring-stone-600 rounded" placeholder="Username" id="username" type="text" />
+    <input class="ring-1 ring-stone-600 rounded" placeholder="Passwort" id="password" type="password" />
+    <button class="bg-green-500 rounded px-2 py-1" type="submit">Login</button>
+  </form>
+  <section id="element-section" class="hidden p-2">
+    <button onclick="getElements()" class="border border-stone-800 rounded px-2 py-1">Get All Elements</button>
+    <div id="element-container" class="flex flex-col gap-2"></div>
+
+    <form id="add-item-form">
+      <input class="ring-1 ring-stone-600 rounded" placeholder="Name" id="name" type="text" />
+      <input class="ring-1 ring-stone-600 rounded" placeholder="Description" id="description" type="text" />
+      <button class="bg-green-500 rounded px-2 py-1" type="submit">Add Element</button>
+    </form>
+  </section>
+</body>
+
+</html>
